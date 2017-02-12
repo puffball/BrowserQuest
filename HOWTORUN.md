@@ -1,0 +1,24 @@
+Short instruction on how to build and run _BrowserQuest_ locally.  
+
+`$ cd BrowserQuest`  
+`$ npm install <-- downloads and installs external libraries`  
+`$ cd client/config`  
+`$ cp config_local.json-dist config_build.json <-- copy config file`  
+
+Edit config_build.json and set "host" to "127.0.0.1". The file should look like this:
+
+    {
+      "host": "127.0.0.1",
+      "port": 8000,
+      "dispatcher": false
+    }
+
+`$ cd ../../bin`  
+`$ chmod +x build.sh <-- make build.sh executable`  
+`$ ./build.sh <-- builds the client in /client-build`  
+`$ cd ..`  
+`$ node server/js/main.js`  
+`$ cd client-build`  
+`$ http-server . <-- starts a web server on port 8080`  
+
+Go to http://localhost:8080 and you should see the _BrowserQuest_ start screen.
