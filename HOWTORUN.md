@@ -5,11 +5,11 @@ You also need a web server, for example _http-server_ which can be installed wit
 
 `$ npm install http-server -g`  
 
-###### Download external dependencies
+##### Download external dependencies
 `$ cd BrowserQuest`  
 `$ npm install # downloads and installs external libraries`  
 
-###### Configure the client
+##### Configure the client
 `$ cd client/config`  
 `$ cp config_local.json-dist config_build.json # copy config file`  
 
@@ -21,12 +21,12 @@ Edit config_build.json and set "host" to "127.0.0.1". The file should look like 
       "dispatcher": false
     }
 
-###### Build the client
+##### Build the client
 `$ cd ../../bin`  
 `$ chmod +x build.sh # make build.sh executable`  
 `$ ./build.sh # builds the client in /client-build`  
 
-###### Start the world server and web server hosting the client
+##### Start the world server and web server hosting the client
 `$ cd ..`  
 `$ node server/js/main.js # starts the world server on port 8000`  
 `$ cd client-build`  
