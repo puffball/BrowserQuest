@@ -1,5 +1,7 @@
 Short instruction on how to build and run _BrowserQuest_ locally.  
 
+Make sure you have a current version of nodejs and npm installed (https://nodejs.org).
+
 `$ cd BrowserQuest`  
 `$ npm install <-- downloads and installs external libraries`  
 `$ cd client/config`  
@@ -17,7 +19,7 @@ Edit config_build.json and set "host" to "127.0.0.1". The file should look like 
 `$ chmod +x build.sh <-- make build.sh executable`  
 `$ ./build.sh <-- builds the client in /client-build`  
 `$ cd ..`  
-`$ node server/js/main.js`  
+`$ node server/js/main.js <-- starts the world server on port 8000`  
 `$ cd client-build`  
 `$ http-server . <-- starts a web server on port 8080`  
 
